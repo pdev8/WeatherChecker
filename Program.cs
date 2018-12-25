@@ -1,5 +1,6 @@
 ﻿using System;
 using Interfaces;
+using Microsoft.Extensions.DependencyInjection;
 using Services;
 
 namespace Weather
@@ -17,6 +18,8 @@ namespace Weather
             var currentWeather = wf.GetCurrentWeather(zipCode);
 
             Console.WriteLine($"The temp in {currentWeather.Name} is {currentWeather.Main.Temp}.");
+
+            var serviceCollection = new ServiceCollection();
 
             Console.ReadLine();
         }
