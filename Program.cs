@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Net.Http;
 using Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Services;
 using Weather.DependencyManager;
+using Weather.Interfaces;
+using Weather.Services;
 
 namespace Weather
 {
@@ -26,6 +29,8 @@ namespace Weather
         static void ConfigureServices(IServiceCollection serviceCollection)
         {
             // add services
+            var httpClient = new HttpClientWrapper(new HttpClientHandler { UseCookies = false });
+            serviceCollection.AddSingleton<IHttpClient>(httpClient);
             serviceCollection.AddTransient<IWeatherFetcher, WeatherFetcher>();
 
             // add app
