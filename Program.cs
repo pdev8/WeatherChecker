@@ -1,4 +1,6 @@
 ﻿using System;
+using Interfaces;
+using Services;
 
 namespace Weather
 {
@@ -6,7 +8,17 @@ namespace Weather
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to the weather app!\n");
+            Console.Write("Enter a zip to find weather details: ");
+            
+            var zipCode = Console.ReadLine();
+
+            IWeatherFetcher wf = new WeatherFetcher();
+            var currentWeather = wf.GetCurrentWeather(zipCode);
+
+            Console.WriteLine($"The temp in {currentWeather.Name} is {currentWeather.Main.Temp}.");
+
+            Console.ReadLine();
         }
     }
 }

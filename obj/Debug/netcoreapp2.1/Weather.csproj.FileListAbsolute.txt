@@ -1,0 +1,11 @@
+C:\Users\ppauleee\Documents\Personal\CSharp\Weather\bin\Debug\netcoreapp2.1\Weather.deps.json
+C:\Users\ppauleee\Documents\Personal\CSharp\Weather\bin\Debug\netcoreapp2.1\Weather.runtimeconfig.json
+C:\Users\ppauleee\Documents\Personal\CSharp\Weather\bin\Debug\netcoreapp2.1\Weather.runtimeconfig.dev.json
+C:\Users\ppauleee\Documents\Personal\CSharp\Weather\bin\Debug\netcoreapp2.1\Weather.dll
+C:\Users\ppauleee\Documents\Personal\CSharp\Weather\bin\Debug\netcoreapp2.1\Weather.pdb
+C:\Users\ppauleee\Documents\Personal\CSharp\Weather\obj\Debug\netcoreapp2.1\Weather.csprojAssemblyReference.cache
+C:\Users\ppauleee\Documents\Personal\CSharp\Weather\obj\Debug\netcoreapp2.1\Weather.csproj.CoreCompileInputs.cache
+C:\Users\ppauleee\Documents\Personal\CSharp\Weather\obj\Debug\netcoreapp2.1\Weather.AssemblyInfoInputs.cache
+C:\Users\ppauleee\Documents\Personal\CSharp\Weather\obj\Debug\netcoreapp2.1\Weather.AssemblyInfo.cs
+C:\Users\ppauleee\Documents\Personal\CSharp\Weather\obj\Debug\netcoreapp2.1\Weather.dll
+C:\Users\ppauleee\Documents\Personal\CSharp\Weather\obj\Debug\netcoreapp2.1\Weather.pdb
