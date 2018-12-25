@@ -2,6 +2,7 @@
 using Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using Services;
+using Weather.DependencyManager;
 
 namespace Weather
 {
@@ -9,19 +10,26 @@ namespace Weather
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the weather app!\n");
-            Console.Write("Enter a zip to find weather details: ");
-            
-            var zipCode = Console.ReadLine();
-
-            IWeatherFetcher wf = new WeatherFetcher();
-            var currentWeather = wf.GetCurrentWeather(zipCode);
-
-            Console.WriteLine($"The temp in {currentWeather.Name} is {currentWeather.Main.Temp}.");
-
+            // create service collection
             var serviceCollection = new ServiceCollection();
+            ConfigureServices(serviceCollection);
+
+            // create service provider
+            var serviceProvider = serviceCollection.BuildServiceProvider();
+
+            // entry to run app
+            serviceProvider.GetService<App>().Run();
 
             Console.ReadLine();
+        }
+
+        static void ConfigureServices(IServiceCollection serviceCollection)
+        {
+            // add services
+            serviceCollection.AddTransient<IWeatherFetcher, WeatherFetcher>();
+
+            // add app
+            serviceCollection.AddTransient<App>();
         }
     }
 }
